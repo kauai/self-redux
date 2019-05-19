@@ -9,8 +9,8 @@ export class Counter extends Component {
       <div>
         <div>
             <div>Contador: {this.props.count}</div>
-            <button onClick={() => this.props.increment()}>Mais</button>
-            <button onClick={() => this.props.decrement()}>Menos</button>
+            <button onClick={() => this.props.increment(5)}>Mais</button>
+            <button onClick={() => this.props.decrement(3)}>Menos</button>
         </div>
       </div>
     )
@@ -23,8 +23,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) =>{
       return {
-          increment:() => dispatch(increment),
-          decrement:() => dispatch(decrement)
+          increment:(value) => dispatch(increment(value)),
+          decrement:(value) => dispatch(decrement(value))
       } 
 }
 

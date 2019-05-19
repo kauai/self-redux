@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {applyMiddleware, createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 import './App.css';
@@ -7,8 +7,8 @@ import Counter from './Counter'
 import counterReducer from './reducer';
 
 const store = createStore(
-  counterReducer,
-  applyMiddleware(logger)
+    counterReducer,
+    applyMiddleware(logger)
   )
 
 
